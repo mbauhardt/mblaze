@@ -114,5 +114,10 @@ while :; do
 	94) # ^ goto parent
 		mseq -C '.^' 2>/dev/null
 		;;
+	116) # t trash it
+		mflag -T .
+		mseq -f : | mseq -S
+		mseq -C +
+		;;
 	esac
 done
